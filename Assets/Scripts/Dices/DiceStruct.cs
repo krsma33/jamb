@@ -4,14 +4,14 @@ using UnityEngine;
 
 public struct DiceStruct
 {
-    public DiceStruct(int diceId, int diceValue, bool diceLocked)
+    public DiceStruct(DiceId diceId, int diceValue, bool isLocked, int roll)
     {
         DiceId = diceId;
         DiceValue = diceValue;
-        DiceLocked = diceLocked;
+        IsLocked = isLocked;
     }
 
-    public int DiceId;
+    public DiceId DiceId;
     public int DiceValue;
-    public bool DiceLocked;
+    public bool IsLocked;
 }

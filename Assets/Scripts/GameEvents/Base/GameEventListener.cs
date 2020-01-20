@@ -4,12 +4,10 @@ using UnityEngine.Events;
 
 namespace ScriptableObjectEvents
 {
-    public abstract class GameEventListener<T, GE, UER> : MonoBehaviour
+    public abstract class GameEventListener<T, GE> : MonoBehaviour
         where GE : GameEvent<T>
-        where UER : UnityEvent<T>
     {
         public GE GameEvent;
-        public UER UnityEventResponse;
 
         private void OnEnable()
         {
@@ -23,18 +21,18 @@ namespace ScriptableObjectEvents
             GameEvent.EventListeners -= TriggerResponses;
         }
 
-        public void TriggerResponses(T val)
+        protected void TriggerResponses(T val)
         {
-            UnityEventResponse.Invoke(val);
+            HandleEvent(val);
         }
+
+        public abstract void HandleEvent(T val);
     }
 
-    public abstract class GameEventListener<GE, UER> : MonoBehaviour
+    public abstract class GameEventListener<GE> : MonoBehaviour
     where GE : GameEvent
-    where UER : UnityEvent
     {
         public GE GameEvent;
-        public UER UnityEventResponse;
 
         private void OnEnable()
         {
@@ -48,9 +46,11 @@ namespace ScriptableObjectEvents
             GameEvent.EventListeners -= TriggerResponses;
         }
 
-        public void TriggerResponses()
+        protected void TriggerResponses()
         {
-            UnityEventResponse.Invoke();
+            HandleEvent();
         }
+
+        public abstract void HandleEvent();
     }
 }

@@ -1519,6 +1519,25 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1899377396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &260822871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2095565580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &260822875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260822871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b4d4587f755be4097f4bf1453608b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
 --- !u!1001 &278144505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5604,7 +5623,7 @@ PrefabInstance:
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: DiceId
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -5618,6 +5637,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 1e55a9e80246da242b47305bd794ea1e,
         type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: DiceIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: diceId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5753,7 +5794,8 @@ PrefabInstance:
       propertyPath: UnityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3760040416545468081, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
 --- !u!224 &907786679 stripped
 RectTransform:
@@ -6588,7 +6630,7 @@ PrefabInstance:
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: DiceId
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -6602,6 +6644,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 21ec840ab542b2645904618228e76cfd,
         type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: DiceIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: diceId
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6737,7 +6801,8 @@ PrefabInstance:
       propertyPath: UnityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3760040416545468081, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
 --- !u!224 &1145448489 stripped
 RectTransform:
@@ -6926,7 +6991,7 @@ PrefabInstance:
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: DiceId
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -6940,6 +7005,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5198567d7dc10074cb2030f90ef50b5b,
         type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: DiceIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: diceId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7075,7 +7162,8 @@ PrefabInstance:
       propertyPath: UnityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3760040416545468081, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
 --- !u!1001 &1184085517
 PrefabInstance:
@@ -8268,6 +8356,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b304928241eac6d4fa60753385c7446f, type: 3}
+--- !u!1 &1313115756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1883597479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313115760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313115756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b4d4587f755be4097f4bf1453608b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
 --- !u!1001 &1332530161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8544,12 +8651,6 @@ GameObject:
   - component: {fileID: 1370653512}
   - component: {fileID: 1370653511}
   - component: {fileID: 1370653513}
-  - component: {fileID: 1370653518}
-  - component: {fileID: 1370653517}
-  - component: {fileID: 1370653516}
-  - component: {fileID: 1370653515}
-  - component: {fileID: 1370653514}
-  - component: {fileID: 1370653519}
   m_Layer: 5
   m_Name: JambBase
   m_TagString: Untagged
@@ -8625,171 +8726,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1370653509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e0b99b36f6ca48bc352a00e3eedc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: a9f76d3979c8c634197109354536d464, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370653519}
-        m_MethodName: SetDiceOne
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &1370653514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370653509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e0b99b36f6ca48bc352a00e3eedc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: 21ec840ab542b2645904618228e76cfd, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370653519}
-        m_MethodName: SetDiceSix
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &1370653515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370653509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e0b99b36f6ca48bc352a00e3eedc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: a2363ab5409c7634998c1d29ce288f3d, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370653519}
-        m_MethodName: SetDiceFive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &1370653516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370653509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e0b99b36f6ca48bc352a00e3eedc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: 1e55a9e80246da242b47305bd794ea1e, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370653519}
-        m_MethodName: SetDiceFour
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &1370653517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370653509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e0b99b36f6ca48bc352a00e3eedc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: 5198567d7dc10074cb2030f90ef50b5b, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370653519}
-        m_MethodName: SetDiceThree
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &1370653518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370653509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378e0b99b36f6ca48bc352a00e3eedc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: 296491783162bf34ab35eedb2cc346fd, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1370653519}
-        m_MethodName: SetDiceTwo
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &1370653519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370653509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f8f3549f5c029b489d04c971d60912b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
 --- !u!1001 &1371964765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9218,7 +9158,7 @@ PrefabInstance:
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: DiceId
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -9232,6 +9172,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a2363ab5409c7634998c1d29ce288f3d,
         type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: DiceIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: diceId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9367,7 +9329,8 @@ PrefabInstance:
       propertyPath: UnityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3760040416545468081, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
 --- !u!1001 &1443771301
 PrefabInstance:
@@ -11092,7 +11055,7 @@ PrefabInstance:
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: DiceId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -11106,6 +11069,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 296491783162bf34ab35eedb2cc346fd,
         type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: DiceIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: diceId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11241,7 +11226,8 @@ PrefabInstance:
       propertyPath: UnityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3760040416545468081, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
 --- !u!1001 &1869932815
 PrefabInstance:
@@ -12739,6 +12725,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 85
       objectReference: {fileID: 0}
+    - target: {fileID: 3981660792869657825, guid: b304928241eac6d4fa60753385c7446f,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3981660792869657825, guid: b304928241eac6d4fa60753385c7446f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3981660792869657825, guid: b304928241eac6d4fa60753385c7446f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3981660792869657825, guid: b304928241eac6d4fa60753385c7446f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.23529412
+      objectReference: {fileID: 0}
     - target: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13141,6 +13147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiceOne
       objectReference: {fileID: 0}
+    - target: {fileID: 999732012312020890, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2543930525828195548, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -13174,7 +13185,7 @@ PrefabInstance:
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
       propertyPath: DiceId
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -13187,6 +13198,18 @@ PrefabInstance:
       propertyPath: ValueChanged
       value: 
       objectReference: {fileID: 11400000, guid: a9f76d3979c8c634197109354536d464,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718,
+        type: 2}
+    - target: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: GameState
+      value: 
+      objectReference: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281,
         type: 2}
     - target: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}
@@ -13334,7 +13357,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3760040416545468081, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9e869366aaddd649ac47c985e10ff13, type: 3}
 --- !u!1001 &6317385069272117834
 PrefabInstance:

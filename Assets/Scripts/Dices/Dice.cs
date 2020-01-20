@@ -1,27 +1,53 @@
 ﻿using ScriptableObjectEvents;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 
-public class Dice : MonoBehaviour
+public enum DiceId
 {
-    public int DiceId;
-    public DiceEvent ValueChanged;
+    One,
+    Two,
+    Three,
+    Four,
+    Five,
+    Six
+}
 
-    private int diceValue;
-    private bool diceLocked = false;
+public class Dice : GameEventListener<VoidEvent>
+{
+    public DiceId diceId;
+    public GameState GameState;
+
+    private DiceStruct dice;
+
+    private void Awake()
+    {
+        dice.DiceId = diceId;
+    }
 
     public void ToggleLock()
     {
-        diceLocked = !diceLocked;
+        dice.IsLocked = !dice.IsLocked;
     }
 
-    public void RollDice()
+    private void DiceRollStart()
     {
-        diceValue = Random.Range(1, 7);
+        dice.DiceValue = Random.Range(1, 7);
+    }
 
-        DiceStruct dice = new DiceStruct(DiceId, diceValue, diceLocked);
+    private int DiceRollRandomDelay() => Random.Range(200, 2200);
 
-        ValueChanged.Raise(dice);
+    private void DiceRollFinish()
+    {
+        GameState.AddOrModifyDice(dice);
+    }
+
+    public override async void HandleEvent()
+    {
+        DiceRollStart();
+        await Task.Delay(DiceRollRandomDelay());
+        DiceRollFinish();
     }
 }
