@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class UpField : BaseField
 {
+    private bool isPreviousFieldFilled;
+
     protected override bool IsColumnSpecificConditionMet()
     {
-        return false;
+        return isPreviousFieldFilled;
     }
 }

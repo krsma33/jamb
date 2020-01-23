@@ -7,41 +7,113 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameState : ScriptableObject
 {
-    public int Roll;
+    private int _roll;
 
-    #region Dices
-
-    public int DicesSetCounter;
-    public DiceStruct[] Dices;
-    public event Action<DiceStruct[], int> RollFinishedEvent;
-
-    private Dictionary<DiceId, DiceStruct> _dices = new Dictionary<DiceId, DiceStruct>();
-
-    public void AddOrModifyDice(DiceStruct dice)
+    public int Roll
     {
-        DicesSetCounter++;
-        _dices[dice.DiceId] = dice;
-        Debug.Log($"Dice struct { dice.DiceId} set with value { dice.DiceValue }, and is locked = { dice.IsLocked }. DiceSetCounter = {DicesSetCounter}");
-
-        if (AreAllDiceSet())
+        get => _roll;
+        set
         {
-            DicesSetCounter = 0;
-            Roll++;
-            OrderDices();
-            RaiseRollFinished();
+            _roll = value;
+            Reset();
         }
     }
 
-    private bool AreAllDiceSet() => DicesSetCounter < 6 ? false : true;
+    #region Dices
 
-    private void OrderDices()
+    public event Action<DiceStruct[]> DiceChangedEvent;
+    public event Action RollResetEvent;
+
+    private DiceStruct[] _dices = new DiceStruct[6];
+    private bool[] _dicesRollFinished = new bool[6];
+
+    public bool AllDiceSet;
+
+    public void ModifyDice(DiceStruct dice)
     {
-        Dices = _dices.Select(kvp => kvp.Value).OrderByDescending(dice => dice.DiceValue).ToArray();
+        ModifyDicesArray(dice);
+        Debug.Log($"Dice struct { dice.DiceId} set with value { dice.DiceValue }, and is locked = { dice.IsLocked }. DiceSetCounter = { _dicesRollFinished.Count(x => x == true)}. Roll count { Roll }");
+
+        if (AllDiceSet)
+        {
+            var lockedDices = GetLockedDices(_dices);
+
+            DiceChangedEvent(lockedDices);
+        }
     }
 
-    private void RaiseRollFinished()
+    public void SetRollFinished(DiceStruct dice)
     {
-        RollFinishedEvent(Dices, Roll);
+        int diceIndex = GetDiceIndex(dice);
+
+        if (!_dicesRollFinished[diceIndex])
+        {
+            _dicesRollFinished[diceIndex] = true;
+            AllDiceSet = AreAllDiceSet();
+        }
+    }
+
+    private void Reset()
+    {
+        ResetDiceSetStatus();
+
+        if (_roll == 0)
+        {
+            ResetFields();
+            RollResetEvent();
+        }
+    }
+
+    private void ResetFields()
+    {
+        DiceChangedEvent(new DiceStruct[] { });
+    }
+
+    private void ResetDiceSetStatus()
+    {
+        AllDiceSet = false;
+        _dicesRollFinished = new bool[6];
+    }
+
+    private DiceStruct[] GetLockedDices(DiceStruct[] dices) => dices.Where(x => x.IsLocked).ToArray();
+
+    private void ModifyDicesArray(DiceStruct dice)
+    {
+        int diceIndex = GetDiceIndex(dice);
+
+        _dices[diceIndex] = dice;
+    }
+
+    private int GetDiceIndex(DiceStruct dice)
+    {
+        switch (dice.DiceId)
+        {
+            case DiceId.One:
+                return 0;
+            case DiceId.Two:
+                return 1;
+            case DiceId.Three:
+                return 2;
+            case DiceId.Four:
+                return 3;
+            case DiceId.Five:
+                return 4;
+            case DiceId.Six:
+                return 5;
+            default:
+                throw new Exception("DiceId enum not implemented");
+        }
+    }
+
+    private bool AreAllDiceSet()
+    {
+        foreach (bool isRollFinished in _dicesRollFinished)
+        {
+            if (!isRollFinished)
+                return false;
+        }
+
+        return true;
     }
 
     #endregion

@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        GameState.DicesSetCounter = 0;
         GameState.Roll = 0;
     }
 }

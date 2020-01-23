@@ -1,9 +1,7 @@
 ﻿using ScriptableObjectEvents;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum DiceId
 {
@@ -25,11 +23,36 @@ public class Dice : GameEventListener<VoidEvent>
     private void Awake()
     {
         dice.DiceId = diceId;
+        GameState.RollResetEvent += ResetDice;
+    }
+
+    private void OnDisable()
+    {
+        GameState.RollResetEvent -= ResetDice;
     }
 
     public void ToggleLock()
     {
-        dice.IsLocked = !dice.IsLocked;
+        if (GameState.Roll > 0 && GameState.AllDiceSet)
+        {
+            dice.IsLocked = !dice.IsLocked;
+            ChangeHighlight();
+            GameState.ModifyDice(dice);
+        }
+    }
+
+    private void ChangeHighlight()
+    {
+        var image = gameObject.GetComponent<Image>();
+
+        if (dice.IsLocked)
+        {
+            image.color = Color.green;
+        }
+        else
+        {
+            image.color = Color.white;
+        }
     }
 
     private void DiceRollStart()
@@ -37,17 +60,30 @@ public class Dice : GameEventListener<VoidEvent>
         dice.DiceValue = Random.Range(1, 7);
     }
 
-    private int DiceRollRandomDelay() => Random.Range(200, 2200);
+    private int DiceRollRandomDelay() => Random.Range(200, 2000);
 
     private void DiceRollFinish()
     {
-        GameState.AddOrModifyDice(dice);
+        gameObject.GetComponentInChildren<Text>().text = dice.DiceValue.ToString();
+
+        GameState.SetRollFinished(dice);
+        GameState.ModifyDice(dice);
     }
 
     public override async void HandleEvent()
     {
-        DiceRollStart();
-        await Task.Delay(DiceRollRandomDelay());
+        if (!dice.IsLocked)
+        {
+            DiceRollStart();
+            await Task.Delay(DiceRollRandomDelay());
+        }
+
         DiceRollFinish();
+    }
+
+    private void ResetDice()
+    {
+        dice.IsLocked = false;
+        dice.DiceValue = 0;
     }
 }

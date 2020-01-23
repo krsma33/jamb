@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct DiceStruct
 {
-    public DiceStruct(DiceId diceId, int diceValue, bool isLocked, int roll)
+    public DiceStruct(DiceId diceId, int diceValue, bool isLocked)
     {
         DiceId = diceId;
         DiceValue = diceValue;
