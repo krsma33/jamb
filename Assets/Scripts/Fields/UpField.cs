@@ -6,8 +6,34 @@ public class UpField : BaseField
 {
     private bool isPreviousFieldFilled;
 
-    protected override bool IsColumnSpecificConditionMet()
+    public IntEvent PreviousFilledEvent;
+
+    protected override bool IsColumnSpecificConditionMet() => roll > 0 && isPreviousFieldFilled && !isCalledRoundInProgress ? true : false;
+
+    protected override bool ShouldScribble() => IsColumnSpecificConditionMet();
+
+    private void OnEnable()
     {
-        return isPreviousFieldFilled;
+        if (Row == RowType.Jamb)
+            isPreviousFieldFilled = true;
+
+        if (PreviousFilledEvent is null)
+            return;
+
+        PreviousFilledEvent.EventListeners += PreviousFilledEventHandler;
     }
+
+    private void OnDisable()
+    {
+        if (PreviousFilledEvent is null)
+            return;
+
+        PreviousFilledEvent.EventListeners -= PreviousFilledEventHandler;
+    }
+
+    private void PreviousFilledEventHandler(int value)
+    {
+        isPreviousFieldFilled = true;
+    }
+
 }

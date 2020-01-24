@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -26,18 +25,19 @@ public enum RowType
 public abstract class BaseField : MonoBehaviour
 {
 
-    #region Abstract Class Implementation
-
     #region Private Members
 
     private int[] diceValues;
+    private bool isScribbleModeOn;
 
     #endregion
 
     #region Protected Members
 
-    protected bool isFilled = false;
+    protected bool isFilled;
     protected bool isFillable;
+    protected bool isCalledRoundInProgress;
+    protected bool canScribble;
     protected int roll;
 
     #endregion
@@ -46,12 +46,41 @@ public abstract class BaseField : MonoBehaviour
 
     public GameState GameState;
     public RowType Row;
+    public IntEvent FieldFilledEvent;
 
     #endregion
+
+    #region Events
 
     private void Awake()
     {
         GameState.DiceChangedEvent += DiceChangedHandler;
+        GameState.FieldCalledEvent += FieldCalledEventHandler;
+        GameState.RollResetEvent += RollResetEventHandler;
+        GameState.ScribbleButtonToggledEvent += ScribbleButtonToggledEventHandler;
+    }
+
+    private void UnsubscribeFromEvents()
+    {
+        GameState.DiceChangedEvent -= DiceChangedHandler;
+        GameState.FieldCalledEvent -= FieldCalledEventHandler;
+        GameState.RollResetEvent -= RollResetEventHandler;
+        GameState.ScribbleButtonToggledEvent -= ScribbleButtonToggledEventHandler;
+    }
+
+    private void ScribbleButtonToggledEventHandler(bool isOn)
+    {
+        isScribbleModeOn = isOn;
+    }
+
+    private void RollResetEventHandler()
+    {
+        isCalledRoundInProgress = false;
+    }
+
+    private void FieldCalledEventHandler()
+    {
+        isCalledRoundInProgress = true;
     }
 
     private void DiceChangedHandler(DiceStruct[] dices)
@@ -60,39 +89,53 @@ public abstract class BaseField : MonoBehaviour
 
         roll = GameState.Roll;
 
-        HighlightLogic(dices);
+        if (dices.Length > 0)
+            diceValues = dices.Select(x => x.DiceValue).OrderByDescending(x => x).ToArray();
+        else
+            diceValues = new int[6];
+
+        if (isScribbleModeOn)
+            ScribbleHighlightLogic();
+        else
+            HighlightLogic(dices);
     }
+
+    #endregion
 
     #region Fill Logic
 
     public void FillField()
     {
-        if (!isFilled)
+        if (canScribble)
         {
-            FillLogic();
+            ScribbleLogic();
+        }
+        else
+        {
+            if (!isFilled)
+                FillLogic();
         }
     }
 
     protected virtual void FillLogic()
     {
         if (isFillable)
-            ValueFill();
+            ValueFill(GetFieldValue());
     }
 
-    private void ValueFill()
+    protected void ValueFill(int fillValue)
     {
-        int fieldValue = GetFieldValue();
-        gameObject.GetComponentInChildren<Text>().text = fieldValue.ToString();
+        gameObject.GetComponentInChildren<Text>().text = fillValue == 0 ? "/" : fillValue.ToString();
 
         isFilled = true;
-        GameState.DiceChangedEvent -= DiceChangedHandler;
 
-        // notify sum of the change
+        FieldFilledEvent.Raise(fillValue);
 
         GameState.Roll = 0;
 
-        // reset collor
         ResetButton();
+
+        UnsubscribeFromEvents();
     }
 
     private int GetDiceSum()
@@ -105,15 +148,15 @@ public abstract class BaseField : MonoBehaviour
 
     private int GetKentaValue()
     {
-        if (roll > 2)
+        if (roll == 1)
             return 66;
 
         if (roll == 2)
             return 56;
 
-        if (roll == 1)
+        if (roll > 2)
             return 46;
-
+               
         return 0;
     }
 
@@ -162,14 +205,16 @@ public abstract class BaseField : MonoBehaviour
 
     #endregion
 
-    #region Highlight Logic
+    #region Scribble Logic
 
-    private void ResetButton()
+    private void ScribbleLogic()
     {
-        isFillable = false;
-        diceValues = null;
-        gameObject.GetComponent<Image>().color = Color.white;
+        ValueFill(0);
     }
+
+    #endregion
+
+    #region Highlight Logic
 
     private void HighlightFillable()
     {
@@ -178,19 +223,18 @@ public abstract class BaseField : MonoBehaviour
 
     protected virtual void HighlightLogic(DiceStruct[] dices)
     {
-        if (dices.Length > 0)
-        {
-            diceValues = dices.Select(x => x.DiceValue).OrderByDescending(x => x).ToArray();
+        IsFillable();
 
-            isFillable = IsFillable();
+        if (isFillable)
+            HighlightFillable();
 
-            if (isFillable)
-                HighlightFillable();
-        }
     }
 
     private bool AreFieldFillConditionsMet(Func<bool> rowSpecificPredicate)
     {
+        if (isCalledRoundInProgress)
+            return false;
+
         if (isFilled)
             return false;
 
@@ -206,9 +250,9 @@ public abstract class BaseField : MonoBehaviour
         return true;
     }
 
-    private bool IsFillable()
+    private void IsFillable()
     {
-        bool isFillable = false;
+        isFillable = false;
 
         switch (Row)
         {
@@ -254,8 +298,6 @@ public abstract class BaseField : MonoBehaviour
             default:
                 throw new Exception("Not implemented RowType enum");
         }
-
-        return isFillable;
     }
 
     private bool IsNumbersFieldFillable(int rowNumber)
@@ -271,9 +313,12 @@ public abstract class BaseField : MonoBehaviour
         if (diceValues[0] < 5)
             return false;
 
+        if (diceValues.Length != 5)
+            return false;
+
         for (int i = diceValues.Length - 1; i > 0; i--)
         {
-            if (diceValues[i] != diceValues[i - 1] + 1)
+            if (diceValues[i] != diceValues[i - 1] - 1)
                 return false;
         }
 
@@ -343,11 +388,40 @@ public abstract class BaseField : MonoBehaviour
 
     #endregion
 
+    #region Scribble Highlight Logic
+
+    private void ScribbleHighlightLogic()
+    {
+        if (ShouldScribble())
+        {
+            HighlightScribbleField();
+            canScribble = true;
+        }
+    }
+
+    protected virtual bool ShouldScribble() => roll > 0 && !isCalledRoundInProgress ? true : false;
+
+    private void HighlightScribbleField()
+    {
+        gameObject.GetComponent<Image>().color = Color.red;
+    }
+
+    #endregion
+
+    #region Reset Field
+    private void ResetButton()
+    {
+        isFillable = false;
+        canScribble = false;
+        diceValues = new int[6];
+        gameObject.GetComponent<Image>().color = Color.white;
+    }
+
+    #endregion
+
     #region Abstract Methods
 
     protected abstract bool IsColumnSpecificConditionMet();
-
-    #endregion
 
     #endregion
 

@@ -7,7 +7,14 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameState : ScriptableObject
 {
+
+    #region Private Members
+
     private int _roll;
+
+    #endregion
+
+    #region Properties
 
     public int Roll
     {
@@ -19,10 +26,14 @@ public class GameState : ScriptableObject
         }
     }
 
+    #endregion
+
     #region Dices
 
     public event Action<DiceStruct[]> DiceChangedEvent;
     public event Action RollResetEvent;
+    public event Action FieldCalledEvent;
+    public event Action<bool> ScribbleButtonToggledEvent;
 
     private DiceStruct[] _dices = new DiceStruct[6];
     private bool[] _dicesRollFinished = new bool[6];
@@ -32,14 +43,7 @@ public class GameState : ScriptableObject
     public void ModifyDice(DiceStruct dice)
     {
         ModifyDicesArray(dice);
-        Debug.Log($"Dice struct { dice.DiceId} set with value { dice.DiceValue }, and is locked = { dice.IsLocked }. DiceSetCounter = { _dicesRollFinished.Count(x => x == true)}. Roll count { Roll }");
-
-        if (AllDiceSet)
-        {
-            var lockedDices = GetLockedDices(_dices);
-
-            DiceChangedEvent(lockedDices);
-        }
+        RaiseDiceChangedEvent();
     }
 
     public void SetRollFinished(DiceStruct dice)
@@ -50,6 +54,28 @@ public class GameState : ScriptableObject
         {
             _dicesRollFinished[diceIndex] = true;
             AllDiceSet = AreAllDiceSet();
+        }
+    }
+
+    public void RaiseScribbleButtonToggledEvent(bool isToggledOn)
+    {
+        ScribbleButtonToggledEvent(isToggledOn);
+        RaiseDiceChangedEvent();
+    }
+
+    public void RaiseFieldCalledEvent()
+    {
+        FieldCalledEvent();
+        RaiseDiceChangedEvent();
+    }
+
+    private void RaiseDiceChangedEvent()
+    {
+        if (AllDiceSet)
+        {
+            var lockedDices = GetLockedDices(_dices);
+
+            DiceChangedEvent(lockedDices);
         }
     }
 
@@ -117,6 +143,5 @@ public class GameState : ScriptableObject
     }
 
     #endregion
-
 
 }

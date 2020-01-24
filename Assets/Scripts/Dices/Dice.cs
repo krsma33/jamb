@@ -60,7 +60,7 @@ public class Dice : GameEventListener<VoidEvent>
         dice.DiceValue = Random.Range(1, 7);
     }
 
-    private int DiceRollRandomDelay() => Random.Range(200, 2000);
+    private int DiceRollRandomDelay() => Random.Range(200, 1200);
 
     private void DiceRollFinish()
     {
@@ -85,5 +85,8 @@ public class Dice : GameEventListener<VoidEvent>
     {
         dice.IsLocked = false;
         dice.DiceValue = 0;
+
+        var image = gameObject.GetComponent<Image>();
+        image.color = Color.white;
     }
 }

@@ -18,6 +18,10 @@ public class CalledField : BaseField
         {
             CallFill();
         }
+        else if (roll == 3 && isFillable == false && isCalled)
+        {
+            ValueFill(0);
+        }
         else
         {
             base.FillLogic();
@@ -28,16 +32,28 @@ public class CalledField : BaseField
     private void CallFill()
     {
         isCalled = true;
-        gameObject.GetComponent<Image>().color = Color.green;
+        HighlightCallable();
+        GameState.RaiseFieldCalledEvent();
     }
 
-    private bool CanCallField() => roll == 1 && !isFilled && !isCalled;
+    private bool CanCallField() => roll == 1 && !isFilled && !isCalledRoundInProgress && !isCalled;
 
     protected override void HighlightLogic(DiceStruct[] dices)
     {
+        isCalledRoundInProgress = isCalled ? false : isCalledRoundInProgress;
+
         if (CanCallField())
         {
             HighlightCallable();
+        }
+        else if (isCalled)
+        {
+            base.HighlightLogic(dices);
+
+            if (roll == 3 && isFillable == false)
+                HighlightScribbleField();
+            else
+                HighlightCallable();
         }
         else
         {
@@ -49,4 +65,11 @@ public class CalledField : BaseField
     {
         gameObject.GetComponent<Image>().color = Color.magenta;
     }
+
+    private void HighlightScribbleField()
+    {
+        gameObject.GetComponent<Image>().color = Color.red;
+    }
+
+    protected override bool ShouldScribble() => roll == 3 && isFillable == false && isCalled;
 }
