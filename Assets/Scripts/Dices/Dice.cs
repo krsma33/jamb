@@ -33,7 +33,7 @@ public class Dice : GameEventListener<VoidEvent>
 
     public void ToggleLock()
     {
-        if (GameState.Roll > 0 && GameState.AllDiceSet)
+        if (GameState.Roll > 0 && GameState.IsRollFinished)
         {
             dice.IsLocked = !dice.IsLocked;
             ChangeHighlight();
@@ -57,10 +57,11 @@ public class Dice : GameEventListener<VoidEvent>
 
     private void DiceRollStart()
     {
+        GameState.IsRollFinished = false;
         dice.DiceValue = Random.Range(1, 7);
     }
 
-    private int DiceRollRandomDelay() => Random.Range(200, 1200);
+    private int DiceRollRandomDelay() => Random.Range(200, 700);
 
     private void DiceRollFinish()
     {

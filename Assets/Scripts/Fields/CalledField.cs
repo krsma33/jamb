@@ -71,5 +71,5 @@ public class CalledField : BaseField
         gameObject.GetComponent<Image>().color = Color.red;
     }
 
-    protected override bool ShouldScribble() => roll == 3 && isFillable == false && isCalled;
+    protected override bool CanScribble(int rollNumber) => rollNumber > 0 && isCalled;
 }

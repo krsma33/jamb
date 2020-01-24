@@ -10,7 +10,7 @@ public class UpField : BaseField
 
     protected override bool IsColumnSpecificConditionMet() => roll > 0 && isPreviousFieldFilled && !isCalledRoundInProgress ? true : false;
 
-    protected override bool ShouldScribble() => IsColumnSpecificConditionMet();
+    protected override bool CanScribble(int rollNumber) => rollNumber > 0 && isPreviousFieldFilled && !isCalledRoundInProgress ? true : false;
 
     private void OnEnable()
     {

@@ -98,6 +98,16 @@ public abstract class BaseField : MonoBehaviour
             ScribbleHighlightLogic();
         else
             HighlightLogic(dices);
+
+        if (roll == 1)
+        {
+            if (CanScribble(2))
+                GameState.IncrementUnlockCounter();
+        }
+        else
+        {
+            GameState.IncrementUnlockCounter();
+        }
     }
 
     #endregion
@@ -392,14 +402,14 @@ public abstract class BaseField : MonoBehaviour
 
     private void ScribbleHighlightLogic()
     {
-        if (ShouldScribble())
+        if (CanScribble(roll))
         {
             HighlightScribbleField();
             canScribble = true;
         }
     }
 
-    protected virtual bool ShouldScribble() => roll > 0 && !isCalledRoundInProgress ? true : false;
+    protected virtual bool CanScribble(int rollNumber) => rollNumber > 0 && !isCalledRoundInProgress ? true : false;
 
     private void HighlightScribbleField()
     {

@@ -9,7 +9,7 @@ public class Roll : MonoBehaviour
 
     public void RollDice()
     {
-        if (GameState.Roll < 3)
+        if (GameState.CanRollDice())
         {
             GameState.Roll++;
             DiceRolled.Raise();

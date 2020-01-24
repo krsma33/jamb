@@ -11,6 +11,7 @@ public class GameState : ScriptableObject
     #region Private Members
 
     private int _roll;
+    private int _unlockCounter;
 
     #endregion
 
@@ -28,17 +29,21 @@ public class GameState : ScriptableObject
 
     #endregion
 
-    #region Dices
+    #region Events
 
     public event Action<DiceStruct[]> DiceChangedEvent;
     public event Action RollResetEvent;
     public event Action FieldCalledEvent;
     public event Action<bool> ScribbleButtonToggledEvent;
 
+    #endregion
+    
+    #region Methods
+
     private DiceStruct[] _dices = new DiceStruct[6];
     private bool[] _dicesRollFinished = new bool[6];
 
-    public bool AllDiceSet;
+    public bool IsRollFinished;
 
     public void ModifyDice(DiceStruct dice)
     {
@@ -53,8 +58,9 @@ public class GameState : ScriptableObject
         if (!_dicesRollFinished[diceIndex])
         {
             _dicesRollFinished[diceIndex] = true;
-            AllDiceSet = AreAllDiceSet();
         }
+
+            IsRollFinished = AreAllDiceSet();
     }
 
     public void RaiseScribbleButtonToggledEvent(bool isToggledOn)
@@ -69,10 +75,19 @@ public class GameState : ScriptableObject
         RaiseDiceChangedEvent();
     }
 
+    public bool CanRollDice() => Roll == 0 || (_unlockCounter > 0 && Roll < 3 && IsRollFinished);
+
+    public void IncrementUnlockCounter()
+    {
+        _unlockCounter++;
+    }
+
     private void RaiseDiceChangedEvent()
     {
-        if (AllDiceSet)
+        if (IsRollFinished)
         {
+            _unlockCounter = 0;
+
             var lockedDices = GetLockedDices(_dices);
 
             DiceChangedEvent(lockedDices);
@@ -97,7 +112,7 @@ public class GameState : ScriptableObject
 
     private void ResetDiceSetStatus()
     {
-        AllDiceSet = false;
+        IsRollFinished = false;
         _dicesRollFinished = new bool[6];
     }
 
