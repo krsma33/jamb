@@ -106,6 +106,9 @@ public class MaxMinSums : MonoBehaviour
 
     private int SumLogic()
     {
+        if (Max == 0 || Min == 0)
+            return 0;
+
         if (Max > Min)
             return GetTotal();
 
