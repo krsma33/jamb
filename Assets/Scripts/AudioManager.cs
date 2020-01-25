@@ -4,6 +4,7 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
+
     public Sound[] Sounds;
 
     void Awake()

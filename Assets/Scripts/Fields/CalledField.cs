@@ -20,7 +20,7 @@ public class CalledField : BaseField
         }
         else if (roll == 3 && isFillable == false && isCalled)
         {
-            ValueFill(0);
+            ScribbleLogic();
         }
         else
         {

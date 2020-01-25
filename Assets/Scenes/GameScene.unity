@@ -307,6 +307,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 4
   FieldFilledEvent: {fileID: 11400000, guid: ee77b91859733a5499b28c74ac1ebdba, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &38841170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -328,6 +332,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 3
   FieldFilledEvent: {fileID: 11400000, guid: 899f1f6ab9d3a8c4483e82b7830df99a, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &40688874 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 166304833355147258, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -389,6 +397,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 0
   FieldFilledEvent: {fileID: 11400000, guid: 950d2f19667c6a2429815d4a59ef1244, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &51683477 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -587,6 +599,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 8
   FieldFilledEvent: {fileID: 11400000, guid: 71c926c270abe734eb636b3502af6fa4, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 0beb6a7e895a36642b753072711bf9b6,
     type: 2}
 --- !u!224 &87989881 stripped
@@ -616,6 +632,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 1
   FieldFilledEvent: {fileID: 11400000, guid: f045c62bf7862ab46a43334156d3dd50, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &90279097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,6 +1058,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 0
   FieldFilledEvent: {fileID: 11400000, guid: f4691ad180ce5274fa6368634bb9eabd, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 008e16b456302f44eb14e15b82159951,
     type: 2}
 --- !u!1001 &138130286
@@ -1544,6 +1568,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 12
   FieldFilledEvent: {fileID: 11400000, guid: d04ba944e78c44e4d8affdad068b6edf, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 0}
 --- !u!224 &183041840 stripped
 RectTransform:
@@ -1828,6 +1856,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 9
   FieldFilledEvent: {fileID: 11400000, guid: 3c1624bf679a5b74a81174baff832c64, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 5037255b4de478c4abddd5143c2e6996,
     type: 2}
 --- !u!1 &234291861 stripped
@@ -1851,6 +1883,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 12
   FieldFilledEvent: {fileID: 11400000, guid: e1327b228205b594b8e553a865f94545, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &235449560 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5244680200036044529, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -2043,6 +2079,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 11
   FieldFilledEvent: {fileID: 11400000, guid: 0136b5c1e56d82d4b930536809d4652d, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &260822871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -2064,6 +2104,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 0
   FieldFilledEvent: {fileID: 11400000, guid: 7306cbd8fdb3b664ca22b56253e0f8d9, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 0}
 --- !u!1001 &278144505
 PrefabInstance:
@@ -2485,6 +2529,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 1
   FieldFilledEvent: {fileID: 11400000, guid: 08c93b813632b374da8b81ea2a2abe4a, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &356443283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2665,6 +2713,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 2
   FieldFilledEvent: {fileID: 11400000, guid: 9ae10e3ff921cf8438d8be1ad106c120, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 45d2a96c3793e064da7e3bc7c56142be,
     type: 2}
 --- !u!1001 &363120584
@@ -3521,6 +3573,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 7
   FieldFilledEvent: {fileID: 11400000, guid: e1a3563ad7db13540b5937d7159a73ab, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &408014461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4067,6 +4123,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 9
   FieldFilledEvent: {fileID: 11400000, guid: 2a1669a144b07ba4eb4bd85c464ee526, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 71c926c270abe734eb636b3502af6fa4,
     type: 2}
 --- !u!1 &474140786 stripped
@@ -4407,6 +4467,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 5
   FieldFilledEvent: {fileID: 11400000, guid: b2a6fb492716c434ba07ee2eeb8b965a, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 3fc41d958b9295248a48af28dd3b4484,
     type: 2}
 --- !u!1 &519420028
@@ -4522,7 +4586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &520527288 stripped
 RectTransform:
@@ -5006,6 +5070,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 3
   FieldFilledEvent: {fileID: 11400000, guid: 6de0f805153ef9345a10b6d44e0a1116, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 22d8a675f474d3c4698a6910a12249dc,
     type: 2}
 --- !u!1001 &590785249
@@ -5194,6 +5262,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 4
   FieldFilledEvent: {fileID: 11400000, guid: 63401cf0d6fb5214aaa098e6f1e56a18, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &627315334 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -5909,6 +5981,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 8
   FieldFilledEvent: {fileID: 11400000, guid: 0fc612068609ba94e9c77d5747046d8b, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &746393542 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -6095,6 +6171,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 11
   FieldFilledEvent: {fileID: 11400000, guid: f61135abc6d794e49bd98a6d55a0e26d, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &766865371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6440,6 +6520,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 7
   FieldFilledEvent: {fileID: 11400000, guid: d2224ecc589ab4848b817f41efc0d53f, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &789189868
 GameObject:
   m_ObjectHideFlags: 0
@@ -6763,7 +6847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &796313895 stripped
 GameObject:
@@ -6786,6 +6870,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 6
   FieldFilledEvent: {fileID: 11400000, guid: fa846e564ddf6984b89a09947717a587, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &800391079 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -6807,6 +6895,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 8
   FieldFilledEvent: {fileID: 11400000, guid: 6b0604235a4db6b44aec1ab7ed841e1c, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &801991752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6993,6 +7085,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 0
   FieldFilledEvent: {fileID: 11400000, guid: 2747adde2c97cb8408f0dae2804d531a, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &819096097 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -7603,6 +7699,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 11
   FieldFilledEvent: {fileID: 11400000, guid: cb4afe0981dd4d945aa1422e3d11f5b0, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: d04ba944e78c44e4d8affdad068b6edf,
     type: 2}
 --- !u!224 &907786679 stripped
@@ -7632,6 +7732,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 6
   FieldFilledEvent: {fileID: 11400000, guid: 448486a9c9b17a5468a4250ee25e8030, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &921599039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7889,6 +7993,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 8
   FieldFilledEvent: {fileID: 11400000, guid: 71f5777fedb6ae84ba3e3a3a527765e7, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 3c1624bf679a5b74a81174baff832c64,
     type: 2}
 --- !u!224 &932886294 stripped
@@ -8083,6 +8191,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 10
   FieldFilledEvent: {fileID: 11400000, guid: 25f3fa6f343abe342aef7de465f4619f, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &964021346 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5244680200036044529, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -8146,6 +8258,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 4
   FieldFilledEvent: {fileID: 11400000, guid: 22d6eb6558512534b95bc92828d7c637, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!114 &1006230642 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3433780104945014871, guid: f9e869366aaddd649ac47c985e10ff13,
@@ -8545,6 +8661,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 0
   FieldFilledEvent: {fileID: 11400000, guid: 230cdcd822d835240876620dcec06965, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1046255351 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -8572,6 +8692,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 3
   FieldFilledEvent: {fileID: 11400000, guid: 45d2a96c3793e064da7e3bc7c56142be, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 11c95ba1dc188e545b9d4d7a90edfeca,
     type: 2}
 --- !u!1 &1052262278 stripped
@@ -8595,6 +8719,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 7
   FieldFilledEvent: {fileID: 11400000, guid: a735aa4ba51eac846b96b27f85dca08b, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &1054380083 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -8616,6 +8744,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 7
   FieldFilledEvent: {fileID: 11400000, guid: 0beb6a7e895a36642b753072711bf9b6, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 03049fc058afd624ab2188bb514433ce,
     type: 2}
 --- !u!1 &1067300494 stripped
@@ -8681,6 +8813,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 11
   FieldFilledEvent: {fileID: 11400000, guid: b41cc173c121edc43a8d4227d7398597, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 53fb7264010a52d4ebe872d552632146,
     type: 2}
 --- !u!1 &1105588721 stripped
@@ -8704,6 +8840,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 10
   FieldFilledEvent: {fileID: 11400000, guid: 5037255b4de478c4abddd5143c2e6996, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: cb4afe0981dd4d945aa1422e3d11f5b0,
     type: 2}
 --- !u!224 &1119843904 stripped
@@ -10644,6 +10784,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 2
   FieldFilledEvent: {fileID: 11400000, guid: 22d8a675f474d3c4698a6910a12249dc, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: e0dd2e28f0b9714428cac1eac7de2d3c,
     type: 2}
 --- !u!224 &1264574148 stripped
@@ -10673,6 +10817,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 10
   FieldFilledEvent: {fileID: 11400000, guid: 7889423cb565e5f498d5781511be8058, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &1265790572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10853,6 +11001,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 12
   FieldFilledEvent: {fileID: 11400000, guid: 4bfd06b5c8fa44844a43fb0df389e5d2, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1276393511 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -10886,6 +11038,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 9
   FieldFilledEvent: {fileID: 11400000, guid: 09a4cc18625969f48bf887fd9ae88122, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1299544447 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -11072,6 +11228,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 2
   FieldFilledEvent: {fileID: 11400000, guid: 7c89b306926ddbd4a8b8ce59169c710c, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &1313115756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -11093,6 +11253,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 2
   FieldFilledEvent: {fileID: 11400000, guid: 0237d457a9eefbd4da212a5350851946, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &1332530161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11273,6 +11437,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 1
   FieldFilledEvent: {fileID: 11400000, guid: 5f232ded6af63f34a9e78f903fee37ad, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1351243269 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5244680200036044529, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -11747,6 +11915,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 6
   FieldFilledEvent: {fileID: 11400000, guid: 21fcf1362d8a7014faa11f6e4f8d8c29, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &1374241753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 166304833355147258, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -11807,6 +11979,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 10
   FieldFilledEvent: {fileID: 11400000, guid: 697f5e3dcdedeba4a9e44daaa8af5680, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &1386072694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11947,6 +12123,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 4
   FieldFilledEvent: {fileID: 11400000, guid: 3fc41d958b9295248a48af28dd3b4484, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 6de0f805153ef9345a10b6d44e0a1116,
     type: 2}
 --- !u!224 &1397229524 stripped
@@ -12759,6 +12939,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 5
   FieldFilledEvent: {fileID: 11400000, guid: 598dab91036550b49ac711f97fd61c1e, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1480290311 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -12957,6 +13141,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 6
   FieldFilledEvent: {fileID: 11400000, guid: cc4058120e4045948961d8c0c7736d48, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 78d419b516e6dd243abcd8370ef14378,
     type: 2}
 --- !u!224 &1540873590 stripped
@@ -13026,6 +13214,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 9
   FieldFilledEvent: {fileID: 11400000, guid: aea5380354c4a5845acffb00ec043da3, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1560052959 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6443655608453926940, guid: b304928241eac6d4fa60753385c7446f,
@@ -13224,6 +13416,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 6
   FieldFilledEvent: {fileID: 11400000, guid: 03049fc058afd624ab2188bb514433ce, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: b2a6fb492716c434ba07ee2eeb8b965a,
     type: 2}
 --- !u!1 &1574618458 stripped
@@ -13247,6 +13443,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 9
   FieldFilledEvent: {fileID: 11400000, guid: 37220c01ac571cc4e992f01260281800, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &1576401898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -13268,6 +13468,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 3
   FieldFilledEvent: {fileID: 11400000, guid: a8dde82e53ee1504281ea4b47fb0e358, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1589113060 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5244680200036044529, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -13373,7 +13577,7 @@ RectTransform:
   - {fileID: 1370653510}
   - {fileID: 1771434012}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14133,6 +14337,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 12
   FieldFilledEvent: {fileID: 11400000, guid: 8cc637202f233104db77de9eb9a1b873, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &1746494665 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -14154,6 +14362,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 4
   FieldFilledEvent: {fileID: 11400000, guid: 11c95ba1dc188e545b9d4d7a90edfeca, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 42326e21ec5c1874f8c27e27d3f09c18,
     type: 2}
 --- !u!1001 &1747272064
@@ -14385,6 +14597,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 2
   FieldFilledEvent: {fileID: 11400000, guid: d53a19bc4ae12fc4fb7e0feaf5d625ca, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &1801335083 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
@@ -14796,6 +15012,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 1
   FieldFilledEvent: {fileID: 11400000, guid: 008e16b456302f44eb14e15b82159951, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 9ae10e3ff921cf8438d8be1ad106c120,
     type: 2}
 --- !u!1001 &1869932815
@@ -14978,6 +15198,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 5
   FieldFilledEvent: {fileID: 11400000, guid: 42326e21ec5c1874f8c27e27d3f09c18, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: cc4058120e4045948961d8c0c7736d48,
     type: 2}
 --- !u!1001 &1883597479
@@ -15304,6 +15528,130 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b304928241eac6d4fa60753385c7446f, type: 3}
+--- !u!1 &1902437075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902437078}
+  - component: {fileID: 1902437077}
+  - component: {fileID: 1902437076}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1902437076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902437075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1affff6441949499019a4856a81854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioManager: {fileID: 1902437077}
+  FieldFillSuccess: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9, type: 2}
+  FieldFillScratch: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805, type: 2}
+  DiceRolled: {fileID: 11400000, guid: 1e90e129a8842c24aa497bc24dd1d718, type: 2}
+--- !u!114 &1902437077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902437075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b4d48078a878e41bef3b04a50564f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - Name: FieldScratched1
+    Clip: {fileID: 8300000, guid: d0e7224670f87364c899ef6678d03c8b, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 9.9
+    EndSeconds: 10.6
+    Source: {fileID: 0}
+  - Name: FieldScratched2
+    Clip: {fileID: 8300000, guid: d0e7224670f87364c899ef6678d03c8b, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 35.7
+    EndSeconds: 36.2
+    Source: {fileID: 0}
+  - Name: FieldScratched3
+    Clip: {fileID: 8300000, guid: d0e7224670f87364c899ef6678d03c8b, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 40.3
+    EndSeconds: 41.3
+    Source: {fileID: 0}
+  - Name: FieldFilled1
+    Clip: {fileID: 8300000, guid: d0e7224670f87364c899ef6678d03c8b, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 13.6
+    EndSeconds: 14.8
+    Source: {fileID: 0}
+  - Name: FieldFilled2
+    Clip: {fileID: 8300000, guid: d0e7224670f87364c899ef6678d03c8b, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 5.6
+    EndSeconds: 6.1
+    Source: {fileID: 0}
+  - Name: FieldFilled3
+    Clip: {fileID: 8300000, guid: d0e7224670f87364c899ef6678d03c8b, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 22.4
+    EndSeconds: 23.2
+    Source: {fileID: 0}
+  - Name: RollDice1
+    Clip: {fileID: 8300000, guid: 1a42b612e83bce64abd452ee4639a5ce, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 1.1
+    EndSeconds: 2
+    Source: {fileID: 0}
+  - Name: RollDice2
+    Clip: {fileID: 8300000, guid: 1a42b612e83bce64abd452ee4639a5ce, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 4.7
+    EndSeconds: 5.5
+    Source: {fileID: 0}
+  - Name: RollDice3
+    Clip: {fileID: 8300000, guid: 1a42b612e83bce64abd452ee4639a5ce, type: 3}
+    Volume: 1
+    Pitch: 1
+    StartSeconds: 8.4
+    EndSeconds: 9.4
+    Source: {fileID: 0}
+--- !u!4 &1902437078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902437075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 502.94757, y: 890.04663, z: -3473.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1908445599 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3510657124375778812, guid: f9e869366aaddd649ac47c985e10ff13,
@@ -15667,6 +16015,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 7
   FieldFilledEvent: {fileID: 11400000, guid: 78d419b516e6dd243abcd8370ef14378, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 71f5777fedb6ae84ba3e3a3a527765e7,
     type: 2}
 --- !u!1001 &1943181916
@@ -16173,6 +16525,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 8
   FieldFilledEvent: {fileID: 11400000, guid: 7a37760c65e6769429edba30420e7643, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &1969730619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -16194,6 +16550,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 3
   FieldFilledEvent: {fileID: 11400000, guid: 40278eda8fb886241bfcbacb4f39ee4a, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &1977774952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16374,6 +16734,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 12
   FieldFilledEvent: {fileID: 11400000, guid: c66475a7100cec54e9d383acb5e1de77, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: b41cc173c121edc43a8d4227d7398597,
     type: 2}
 --- !u!1 &1990516676 stripped
@@ -16397,6 +16761,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 1
   FieldFilledEvent: {fileID: 11400000, guid: e0dd2e28f0b9714428cac1eac7de2d3c, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 7306cbd8fdb3b664ca22b56253e0f8d9,
     type: 2}
 --- !u!224 &2003408608 stripped
@@ -16633,6 +17001,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 5
   FieldFilledEvent: {fileID: 11400000, guid: fe50d99a02d052f4ca6c1e752f89b52e, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!224 &2062679469 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5244680200036044529, guid: 82e7862058b72e740ad4d25ddf7f7b27,
@@ -17020,6 +17392,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 5
   FieldFilledEvent: {fileID: 11400000, guid: dfd345073f8129d479ffcf74702eac69, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1 &2116694016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7413162591700362035, guid: b304928241eac6d4fa60753385c7446f,
@@ -17041,6 +17417,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 11
   FieldFilledEvent: {fileID: 11400000, guid: 643280ade849fd14eacf575e96e2eec8, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
 --- !u!1001 &2121095785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17318,6 +17698,10 @@ MonoBehaviour:
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
   Row: 10
   FieldFilledEvent: {fileID: 11400000, guid: 53fb7264010a52d4ebe872d552632146, type: 2}
+  FieldFilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
+  FieldFilledSuccessEvent: {fileID: 11400000, guid: e446ce247e3fe6147bd01bd1adef74a9,
+    type: 2}
   PreviousFilledEvent: {fileID: 11400000, guid: 2a1669a144b07ba4eb4bd85c464ee526,
     type: 2}
 --- !u!1001 &2389991353747704808

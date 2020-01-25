@@ -47,6 +47,8 @@ public abstract class BaseField : MonoBehaviour
     public GameState GameState;
     public RowType Row;
     public IntEvent FieldFilledEvent;
+    public VoidEvent FieldFilledScratchedEvent;
+    public VoidEvent FieldFilledSuccessEvent;
 
     #endregion
 
@@ -130,10 +132,13 @@ public abstract class BaseField : MonoBehaviour
     protected virtual void FillLogic()
     {
         if (isFillable)
+        {
             ValueFill(GetFieldValue());
+            FieldFilledSuccessEvent.Raise();
+        }
     }
 
-    protected void ValueFill(int fillValue)
+    private void ValueFill(int fillValue)
     {
         gameObject.GetComponentInChildren<Text>().text = fillValue == 0 ? "/" : fillValue.ToString();
 
@@ -217,9 +222,10 @@ public abstract class BaseField : MonoBehaviour
 
     #region Scribble Logic
 
-    private void ScribbleLogic()
+    protected virtual void ScribbleLogic()
     {
         ValueFill(0);
+        FieldFilledScratchedEvent.Raise();
     }
 
     #endregion
