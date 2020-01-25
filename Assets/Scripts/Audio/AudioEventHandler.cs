@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class AudioEventHandler : MonoBehaviour
 {
-
     public AudioManager AudioManager;
 
     public VoidEvent FieldFillSuccess;
     public VoidEvent FieldFillScratch;
     public VoidEvent DiceRolled;
+
+    private void Start()
+    {
+        AudioManager.PlayMusic("MainMusicTheme");
+    }
 
     private void OnEnable()
     {
@@ -28,19 +32,19 @@ public class AudioEventHandler : MonoBehaviour
     private void PlayScratchSound()
     {
         int randomSfx = Random.Range(1, 4);
-        AudioManager.Play($"FieldScratched{ randomSfx }");
+        AudioManager.PlaySfx($"FieldScratched{ randomSfx }");
     }
 
     private void PlayFilledSound()
     {
         int randomSfx = Random.Range(1, 4);
-        AudioManager.Play($"FieldFilled{ randomSfx }");
+        AudioManager.PlaySfx($"FieldFilled{ randomSfx }");
     }
 
     private void PlayRollDiceSound()
     {
         int randomSfx = Random.Range(1, 4);
-        AudioManager.Play($"RollDice{ randomSfx }");
+        AudioManager.PlaySfx($"RollDice{ randomSfx }");
     }
 
 }

@@ -15638,6 +15638,13 @@ MonoBehaviour:
     StartSeconds: 8.4
     EndSeconds: 9.4
     Source: {fileID: 0}
+  Musics:
+  - Name: MainMusicTheme
+    Clip: {fileID: 8300000, guid: c930bef96f5c9bf4cab6dfef9631787c, type: 3}
+    Volume: 0.1
+    Pitch: 1
+    Loop: 1
+    Source: {fileID: 0}
 --- !u!4 &1902437078
 Transform:
   m_ObjectHideFlags: 0
