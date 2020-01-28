@@ -90,7 +90,7 @@ public abstract class BaseField : MonoBehaviour
 
     private void DiceChangedHandler(DiceStruct[] dices)
     {
-        ResetButton();
+        ResetVariables();
 
         roll = GameState.Roll;
 
@@ -246,6 +246,10 @@ public abstract class BaseField : MonoBehaviour
 
         if (isFillable)
             HighlightFillable();
+        else
+        {
+            highlightParticle.DestroyHighlightParticles();
+        }
 
     }
 
@@ -411,10 +415,15 @@ public abstract class BaseField : MonoBehaviour
 
     private void ScribbleHighlightLogic()
     {
-        if (CanScribble(roll))
+        canScribble = CanScribble(roll);
+
+        if (canScribble)
         {
             HighlightScribbleField();
-            canScribble = true;
+        }
+        else
+        {
+            highlightParticle.DestroyHighlightParticles();
         }
     }
 
@@ -422,7 +431,6 @@ public abstract class BaseField : MonoBehaviour
 
     protected void HighlightScribbleField()
     {
-        //highlightParticle.SetHighlightColor(HighlightColor.Scribble);
         highlightParticle.CreateHighlightParticles(HighlightColor.Scribble);
     }
 
@@ -432,10 +440,15 @@ public abstract class BaseField : MonoBehaviour
 
     private void ResetButton()
     {
+        ResetVariables();
+        highlightParticle.DestroyHighlightParticles();
+    }
+
+    private void ResetVariables()
+    {
         isFillable = false;
         canScribble = false;
         diceValues = new int[6];
-        highlightParticle.DestroyHighlightParticles();
     }
 
     #endregion

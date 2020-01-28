@@ -19,18 +19,25 @@ public class HighlightParticle : MonoBehaviour
 
     private GameObject instantiatedPrefab;
 
-    private void Awake()
-    {
-
-    }
-
     public void CreateHighlightParticles(HighlightColor color)
     {
-        //particleSystem.gameObject.SetActive(true);
+        if (instantiatedPrefab == null)
+            InstantiateAndSetupPrefab(color);
+        else
+        {
+            if(instantiatedPrefab.GetComponent<ParticleSystem>().main.startColor.color != GetHighlightColor(color))
+            {
+                DestroyHighlightParticles();
+                InstantiateAndSetupPrefab(color);
+            }
+        }
+    }
 
+    private void InstantiateAndSetupPrefab(HighlightColor color)
+    {
         instantiatedPrefab = Instantiate(HighlightPrefab, Vector3.zero, Quaternion.identity);
         instantiatedPrefab.transform.parent = transform;
-        instantiatedPrefab.transform.localPosition = new Vector3(0,0,-1);
+        instantiatedPrefab.transform.localPosition = new Vector3(0, 0, -1);
         instantiatedPrefab.transform.localScale = HighlightPrefab.transform.localScale;
 
         SetHighlightColor(color);
@@ -38,31 +45,28 @@ public class HighlightParticle : MonoBehaviour
 
     public void DestroyHighlightParticles()
     {
-
-        //particleSystem.gameObject.SetActive(false);
-
-        if (instantiatedPrefab)
+        if (instantiatedPrefab != null)
             Object.Destroy(instantiatedPrefab);
-
     }
 
     private void SetHighlightColor(HighlightColor color)
     {
         var main = instantiatedPrefab.GetComponent<ParticleSystem>().main;
+        main.startColor = GetHighlightColor(color);
+    }
 
+    private Color GetHighlightColor(HighlightColor color)
+    {
         switch (color)
         {
             case HighlightColor.Default:
-                main.startColor = DefaultHighlightColor;
-                break;
+                return DefaultHighlightColor;
             case HighlightColor.Scribble:
-                main.startColor = ScribbleHighlightColor;
-                break;
+                return ScribbleHighlightColor;
             case HighlightColor.Called:
-                main.startColor = CalledHighlightColor;
-                break;
+                return CalledHighlightColor;
             default:
-                break;
+                return Color.black;
         }
     }
 
