@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 782251606113899013}
   - component: {fileID: 782251606113899012}
   - component: {fileID: 782251606113899015}
-  - component: {fileID: 3573406323904423440}
   m_Layer: 0
   m_Name: PulseHighlightPartilcle
   m_TagString: Untagged
@@ -4764,18 +4763,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &3573406323904423440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782251606113899014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e658d82e86a4202438cb642c8c733819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaultHighlightColor: {r: 0.24705882, g: 0.2784314, b: 0.34901962, a: 1}
-  ScribbleHighlightColor: {r: 0.7830189, g: 0.13665895, b: 0.13665895, a: 1}
-  CalledHighlightColor: {r: 0.19842473, g: 0.8584903, b: 0.8584906, a: 1}

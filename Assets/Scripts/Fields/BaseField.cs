@@ -62,7 +62,7 @@ public abstract class BaseField : MonoBehaviour
         GameState.RollResetEvent += RollResetEventHandler;
         GameState.ScribbleButtonToggledEvent += ScribbleButtonToggledEventHandler;
 
-        highlightParticle = gameObject.GetComponentInChildren<HighlightParticle>(true);
+        highlightParticle = gameObject.GetComponentInChildren<HighlightParticle>();
     }
 
     private void UnsubscribeFromEvents()
@@ -237,8 +237,7 @@ public abstract class BaseField : MonoBehaviour
 
     protected void HighlightFillable()
     {
-        highlightParticle.SetHighlightColor(HighlightColor.Default);
-        highlightParticle.EnableHighlight();
+        highlightParticle.CreateHighlightParticles(HighlightColor.Default);
     }
 
     protected virtual void HighlightLogic(DiceStruct[] dices)
@@ -423,8 +422,8 @@ public abstract class BaseField : MonoBehaviour
 
     protected void HighlightScribbleField()
     {
-        highlightParticle.SetHighlightColor(HighlightColor.Scribble);
-        highlightParticle.EnableHighlight();
+        //highlightParticle.SetHighlightColor(HighlightColor.Scribble);
+        highlightParticle.CreateHighlightParticles(HighlightColor.Scribble);
     }
 
     #endregion
@@ -436,7 +435,7 @@ public abstract class BaseField : MonoBehaviour
         isFillable = false;
         canScribble = false;
         diceValues = new int[6];
-        highlightParticle.DisableHighlight();
+        highlightParticle.DestroyHighlightParticles();
     }
 
     #endregion
