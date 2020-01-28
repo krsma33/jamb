@@ -39,6 +39,7 @@ public abstract class BaseField : MonoBehaviour
     protected bool isCalledRoundInProgress;
     protected bool canScribble;
     protected int roll;
+    protected HighlightParticle highlightParticle;
 
     #endregion
 
@@ -60,6 +61,8 @@ public abstract class BaseField : MonoBehaviour
         GameState.FieldCalledEvent += FieldCalledEventHandler;
         GameState.RollResetEvent += RollResetEventHandler;
         GameState.ScribbleButtonToggledEvent += ScribbleButtonToggledEventHandler;
+
+        highlightParticle = gameObject.GetComponentInChildren<HighlightParticle>(true);
     }
 
     private void UnsubscribeFromEvents()
@@ -232,9 +235,10 @@ public abstract class BaseField : MonoBehaviour
 
     #region Highlight Logic
 
-    private void HighlightFillable()
+    protected void HighlightFillable()
     {
-        gameObject.GetComponent<Image>().color = Color.cyan;
+        highlightParticle.SetHighlightColor(HighlightColor.Default);
+        highlightParticle.EnableHighlight();
     }
 
     protected virtual void HighlightLogic(DiceStruct[] dices)
@@ -417,20 +421,22 @@ public abstract class BaseField : MonoBehaviour
 
     protected virtual bool CanScribble(int rollNumber) => rollNumber > 0 && !isCalledRoundInProgress ? true : false;
 
-    private void HighlightScribbleField()
+    protected void HighlightScribbleField()
     {
-        gameObject.GetComponent<Image>().color = Color.red;
+        highlightParticle.SetHighlightColor(HighlightColor.Scribble);
+        highlightParticle.EnableHighlight();
     }
 
     #endregion
 
     #region Reset Field
+
     private void ResetButton()
     {
         isFillable = false;
         canScribble = false;
         diceValues = new int[6];
-        gameObject.GetComponent<Image>().color = Color.white;
+        highlightParticle.DisableHighlight();
     }
 
     #endregion

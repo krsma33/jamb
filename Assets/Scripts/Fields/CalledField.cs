@@ -52,7 +52,7 @@ public class CalledField : BaseField
 
             if (roll == 3 && isFillable == false)
                 HighlightScribbleField();
-            else
+            else if (roll < 3 && isFillable == false)
                 HighlightCallable();
         }
         else
@@ -63,12 +63,8 @@ public class CalledField : BaseField
 
     private void HighlightCallable()
     {
-        gameObject.GetComponent<Image>().color = Color.magenta;
-    }
-
-    private void HighlightScribbleField()
-    {
-        gameObject.GetComponent<Image>().color = Color.red;
+        highlightParticle.SetHighlightColor(HighlightColor.Called);
+        highlightParticle.EnableHighlight();
     }
 
     protected override bool CanScribble(int rollNumber) => rollNumber > 0 && isCalled;
