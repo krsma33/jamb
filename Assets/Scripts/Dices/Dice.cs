@@ -1,4 +1,5 @@
 ﻿using ScriptableObjectEvents;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,13 +18,16 @@ public class Dice : GameEventListener<VoidEvent>
 {
     public DiceId diceId;
     public GameState GameState;
+    public Sprite[] DiceSides;
 
     private DiceStruct dice;
+    private Image image;
 
     private void Awake()
     {
         dice.DiceId = diceId;
         GameState.RollResetEvent += ResetDice;
+        image = gameObject.GetComponent<Image>();
     }
 
     private void OnDisable()
@@ -45,13 +49,17 @@ public class Dice : GameEventListener<VoidEvent>
     {
         var image = gameObject.GetComponent<Image>();
 
+        var color = image.color;
+
         if (dice.IsLocked)
         {
-            image.color = Color.green;
+            color.a = 0.5f;
+            image.color = color;
         }
         else
         {
-            image.color = Color.white;
+            color.a = 1.0f;
+            image.color = color;
         }
     }
 
@@ -61,11 +69,11 @@ public class Dice : GameEventListener<VoidEvent>
         dice.DiceValue = Random.Range(1, 7);
     }
 
-    private int DiceRollRandomDelay() => Random.Range(200, 700);
+    private int DiceRollRandomDelay() => Random.Range(2200, 7700);
 
     private void DiceRollFinish()
     {
-        gameObject.GetComponentInChildren<Text>().text = dice.DiceValue.ToString();
+        image.sprite = DiceSides[dice.DiceValue - 1];
 
         GameState.SetRollFinished(dice);
         GameState.ModifyDice(dice);
@@ -76,10 +84,35 @@ public class Dice : GameEventListener<VoidEvent>
         if (!dice.IsLocked)
         {
             DiceRollStart();
-            await Task.Delay(DiceRollRandomDelay());
+
+            //var tokenSource = new CancellationTokenSource();
+            //var token = tokenSource.Token;
+            //tokenSource.CancelAfter(DiceRollRandomDelay());
+
+            //await SimulateRoll(token);
         }
 
         DiceRollFinish();
+    }
+
+    private void SetRandomSprite()
+    {
+        int randIndex = Random.Range(0, 6);
+        image.sprite = DiceSides[randIndex];
+    }
+
+    private async Task SimulateRoll(CancellationToken token)
+    {
+        await Task.Run(async () =>
+        {
+            while (true)
+            {
+                token.ThrowIfCancellationRequested();
+
+                SetRandomSprite();
+                await Task.Delay(300, token);
+            }
+        }, token);
     }
 
     private void ResetDice()
@@ -87,7 +120,8 @@ public class Dice : GameEventListener<VoidEvent>
         dice.IsLocked = false;
         dice.DiceValue = 0;
 
-        var image = gameObject.GetComponent<Image>();
-        image.color = Color.white;
+        var color = image.color;
+        color.a = 1.0f;
+        image.color = color;
     }
 }
