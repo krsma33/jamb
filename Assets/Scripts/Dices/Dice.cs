@@ -63,18 +63,26 @@ public class Dice : GameEventListener<VoidEvent>
         }
     }
 
-    private void DiceRollStart()
+    private async Task DiceRollStart()
     {
-        GameState.IsRollFinished = false;
-        dice.DiceValue = Random.Range(1, 7);
-    }
+        int randIndex = 0;
 
-    private int DiceRollRandomDelay() => Random.Range(2200, 7700);
+        GameState.IsRollFinished = false;
+
+        int rollCounter = Random.Range(1, 7);
+
+        for (int i = 0; i < rollCounter; i++)
+        {
+            randIndex = Random.Range(0, 6);
+            SetSprite(randIndex);
+            await Task.Delay(150);
+        }
+
+        dice.DiceValue = randIndex + 1;
+    }
 
     private void DiceRollFinish()
     {
-        image.sprite = DiceSides[dice.DiceValue - 1];
-
         GameState.SetRollFinished(dice);
         GameState.ModifyDice(dice);
     }
@@ -83,36 +91,15 @@ public class Dice : GameEventListener<VoidEvent>
     {
         if (!dice.IsLocked)
         {
-            DiceRollStart();
-
-            //var tokenSource = new CancellationTokenSource();
-            //var token = tokenSource.Token;
-            //tokenSource.CancelAfter(DiceRollRandomDelay());
-
-            //await SimulateRoll(token);
+            await DiceRollStart();
         }
 
         DiceRollFinish();
     }
 
-    private void SetRandomSprite()
+    private void SetSprite(int spriteIndex)
     {
-        int randIndex = Random.Range(0, 6);
-        image.sprite = DiceSides[randIndex];
-    }
-
-    private async Task SimulateRoll(CancellationToken token)
-    {
-        await Task.Run(async () =>
-        {
-            while (true)
-            {
-                token.ThrowIfCancellationRequested();
-
-                SetRandomSprite();
-                await Task.Delay(300, token);
-            }
-        }, token);
+        image.sprite = DiceSides[spriteIndex];
     }
 
     private void ResetDice()

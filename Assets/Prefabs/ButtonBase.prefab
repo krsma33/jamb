@@ -131,10 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658d82e86a4202438cb642c8c733819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultHighlightColor: {r: 0.24705882, g: 0.2784314, b: 0.34901962, a: 1}
-  ScribbleHighlightColor: {r: 0.78431374, g: 0.13725491, b: 0.13725491, a: 1}
-  CalledHighlightColor: {r: 0.2, g: 0.85882354, b: 0.85882354, a: 1}
-  HighlightPrefab: {fileID: 782251606113899014, guid: 64d725bb47a187849875c556ff3b3c4a,
+  RegularHighlightPrefab: {fileID: 782251606113899014, guid: 64d725bb47a187849875c556ff3b3c4a,
+    type: 3}
+  CalledHighlightPrefab: {fileID: 2488086889823403236, guid: 273294e14897b1a4392828776d630614,
+    type: 3}
+  ScribbleHighlightPrefab: {fileID: 2786511752500301547, guid: 3cb28cd140ad51e4898ed8877377618e,
     type: 3}
 --- !u!1 &8186184170600877671
 GameObject:

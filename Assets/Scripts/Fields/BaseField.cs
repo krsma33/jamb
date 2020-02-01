@@ -237,7 +237,7 @@ public abstract class BaseField : MonoBehaviour
 
     protected void HighlightFillable()
     {
-        highlightParticle.CreateHighlightParticles(HighlightColor.Default);
+        highlightParticle.CreateHighlightParticles(HighlightType.Default);
     }
 
     protected virtual void HighlightLogic(DiceStruct[] dices)
@@ -431,7 +431,7 @@ public abstract class BaseField : MonoBehaviour
 
     protected void HighlightScribbleField()
     {
-        highlightParticle.CreateHighlightParticles(HighlightColor.Scribble);
+        highlightParticle.CreateHighlightParticles(HighlightType.Scribble);
     }
 
     #endregion

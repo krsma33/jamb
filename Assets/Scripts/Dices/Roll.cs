@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Roll : MonoBehaviour
 {
@@ -13,6 +14,14 @@ public class Roll : MonoBehaviour
         {
             GameState.Roll++;
             DiceRolled.Raise();
+            ChangeText();
         }
+    }
+
+    private void ChangeText()
+    {
+        var textObject = gameObject.GetComponentInChildren<Text>();
+
+        textObject.text = $"ROLL x{ GameState.Roll }";
     }
 }

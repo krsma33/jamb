@@ -6,8 +6,26 @@ using UnityEngine.UI;
 public class ScribbleField : MonoBehaviour
 {
     public GameState GameState;
+    public VoidEvent FilledScratchedEvent;
+
 
     private bool _isButtonToggled;
+
+    private void OnEnable()
+    {
+        FilledScratchedEvent.EventListeners += ResetScriblleFieldToggle;
+    }
+
+    private void OnDisable()
+    {
+        FilledScratchedEvent.EventListeners -= ResetScriblleFieldToggle;
+
+    }
+
+    private void ResetScriblleFieldToggle()
+    {
+        IsButtonToggled = false;
+    }
 
     public bool IsButtonToggled
     {

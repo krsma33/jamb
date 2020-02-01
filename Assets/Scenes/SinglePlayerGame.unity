@@ -9161,6 +9161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameState: {fileID: 11400000, guid: 0379ac390d692a14da94b0a89ae8b281, type: 2}
+  FilledScratchedEvent: {fileID: 11400000, guid: 8dc1398f146d4ea4ea6c54d8e6d67805,
+    type: 2}
 --- !u!114 &1136361068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17996,6 +17998,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 947515499000452926, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 947515499000452926, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 947515499000452926, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 947515499000452926, guid: f9e869366aaddd649ac47c985e10ff13,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 999732012312020890, guid: f9e869366aaddd649ac47c985e10ff13,
         type: 3}

@@ -75,7 +75,7 @@ public class GameState : ScriptableObject
         RaiseDiceChangedEvent();
     }
 
-    public bool CanRollDice() => Roll == 0 || (_unlockCounter > 0 && Roll < 3 && IsRollFinished);
+    public bool CanRollDice() => (Roll == 0 || (_unlockCounter > 0 && Roll < 3 && IsRollFinished)) && _dices.Any(x => !x.IsLocked);
 
     public void IncrementUnlockCounter()
     {

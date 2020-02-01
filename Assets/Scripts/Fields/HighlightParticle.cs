@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum HighlightColor
+public enum HighlightType
 {
     Default,
     Scribble,
@@ -11,36 +11,32 @@ public enum HighlightColor
 
 public class HighlightParticle : MonoBehaviour
 {
-    public Color DefaultHighlightColor;
-    public Color ScribbleHighlightColor;
-    public Color CalledHighlightColor;
-
-    public GameObject HighlightPrefab;
+    public GameObject RegularHighlightPrefab;
+    public GameObject CalledHighlightPrefab;
+    public GameObject ScribbleHighlightPrefab;
 
     private GameObject instantiatedPrefab;
 
-    public void CreateHighlightParticles(HighlightColor color)
+    public void CreateHighlightParticles(HighlightType highlightType)
     {
         if (instantiatedPrefab == null)
-            InstantiateAndSetupPrefab(color);
+            InstantiateAndSetupPrefab(highlightType);
         else
         {
-            if(instantiatedPrefab.GetComponent<ParticleSystem>().main.startColor.color != GetHighlightColor(color))
+            if(instantiatedPrefab != GetHighlightType(highlightType))
             {
                 DestroyHighlightParticles();
-                InstantiateAndSetupPrefab(color);
+                InstantiateAndSetupPrefab(highlightType);
             }
         }
     }
 
-    private void InstantiateAndSetupPrefab(HighlightColor color)
+    private void InstantiateAndSetupPrefab(HighlightType highlightType)
     {
-        instantiatedPrefab = Instantiate(HighlightPrefab, Vector3.zero, Quaternion.identity);
+        instantiatedPrefab = Instantiate(GetHighlightType(highlightType), Vector3.zero, Quaternion.identity);
         instantiatedPrefab.transform.parent = transform;
         instantiatedPrefab.transform.localPosition = new Vector3(0, 0, -1);
-        instantiatedPrefab.transform.localScale = HighlightPrefab.transform.localScale;
-
-        SetHighlightColor(color);
+        instantiatedPrefab.transform.localScale = RegularHighlightPrefab.transform.localScale;
     }
 
     public void DestroyHighlightParticles()
@@ -49,24 +45,18 @@ public class HighlightParticle : MonoBehaviour
             Object.Destroy(instantiatedPrefab);
     }
 
-    private void SetHighlightColor(HighlightColor color)
-    {
-        var main = instantiatedPrefab.GetComponent<ParticleSystem>().main;
-        main.startColor = GetHighlightColor(color);
-    }
-
-    private Color GetHighlightColor(HighlightColor color)
+    private GameObject GetHighlightType(HighlightType color)
     {
         switch (color)
         {
-            case HighlightColor.Default:
-                return DefaultHighlightColor;
-            case HighlightColor.Scribble:
-                return ScribbleHighlightColor;
-            case HighlightColor.Called:
-                return CalledHighlightColor;
+            case HighlightType.Default:
+                return RegularHighlightPrefab;
+            case HighlightType.Scribble:
+                return ScribbleHighlightPrefab;
+            case HighlightType.Called:
+                return CalledHighlightPrefab;
             default:
-                return Color.black;
+                return RegularHighlightPrefab;
         }
     }
 

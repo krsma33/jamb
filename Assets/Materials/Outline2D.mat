@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FieldHighlightMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 8751df5c259d37d4d914eb64e216ab83,
+  m_Name: Outline2D
+  m_Shader: {fileID: -6465566751694194690, guid: 3508d44e6c31ae9438dcd82dd0d498ac,
     type: 3}
-  m_ShaderKeywords: ENUM_3D074BB_CLOCKWISE ETC1_EXTERNAL_ALPHA
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,10 +20,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - MainTexture_54645:
-        m_Texture: {fileID: 2800000, guid: 3371dc9eb629cff42942a40b5e7f09a3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -37,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3371dc9eb629cff42942a40b5e7f09a3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3bd3a55cbd8a7af489d6f647102b35db, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -53,8 +49,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - ENUM_3D074BB: 0
-    - Vector1_CBA2E323: 0.8
+    - Vector1_C4678476: 0.339
+    - Vector1_F6A2B607: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -67,6 +63,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _OutlineThickness: 0.5
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -77,13 +74,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_741D48E3: {r: 0.14509805, g: 0.69898754, b: 0.78431374, a: 0}
-    - Vector2_77128894: {r: 1, g: 1, b: 0, a: 0}
+    - Color_FAD18B33: {r: 0, g: 766.9961, b: 493.9294, a: 1}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 3.5050309, g: 0, b: 0.16805212, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
---- !u!114 &4833446842473847102
+--- !u!114 &3502417017794410094
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

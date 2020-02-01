@@ -63,7 +63,7 @@ public class CalledField : BaseField
 
     private void HighlightCallable()
     {
-        highlightParticle.CreateHighlightParticles(HighlightColor.Called);
+        highlightParticle.CreateHighlightParticles(HighlightType.Called);
     }
 
     protected override bool CanScribble(int rollNumber) => rollNumber > 0 && isCalled;
