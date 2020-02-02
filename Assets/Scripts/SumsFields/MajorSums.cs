@@ -79,7 +79,7 @@ public class MajorSums : MonoBehaviour
     public IntEvent CalledChangedEvent;
     public IntEvent HandChangedEvent;
 
-    //public IntEvent MajorSumChangedEvent;
+    public IntEvent MajorSumChangedEvent;
 
     public Text Text;
 
@@ -140,6 +140,7 @@ public class MajorSums : MonoBehaviour
 
         Text.text = totalSum.ToString();
 
+        MajorSumChangedEvent.Raise(totalSum);
     }
 
     private int GetTotal() => Down + Free + Up + Called + Hand;

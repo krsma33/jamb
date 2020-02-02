@@ -19,15 +19,16 @@ public class Dice : GameEventListener<VoidEvent>
     public DiceId diceId;
     public GameState GameState;
     public Sprite[] DiceSides;
+    public Sprite[] DiceSidesHighlights;
 
     private DiceStruct dice;
-    private Image image;
+    public Image DiceImage;
+    public Image DiceHighlightImage;
 
     private void Awake()
     {
         dice.DiceId = diceId;
         GameState.RollResetEvent += ResetDice;
-        image = gameObject.GetComponent<Image>();
     }
 
     private void OnDisable()
@@ -47,19 +48,17 @@ public class Dice : GameEventListener<VoidEvent>
 
     private void ChangeHighlight()
     {
-        var image = gameObject.GetComponent<Image>();
-
-        var color = image.color;
+        var color = DiceHighlightImage.color;
 
         if (dice.IsLocked)
         {
-            color.a = 0.5f;
-            image.color = color;
+            color.a = 1.0f;
+            DiceHighlightImage.color = color;
         }
         else
         {
-            color.a = 1.0f;
-            image.color = color;
+            color.a = 0.0f;
+            DiceHighlightImage.color = color;
         }
     }
 
@@ -99,7 +98,8 @@ public class Dice : GameEventListener<VoidEvent>
 
     private void SetSprite(int spriteIndex)
     {
-        image.sprite = DiceSides[spriteIndex];
+        DiceImage.sprite = DiceSides[spriteIndex];
+        DiceHighlightImage.sprite = DiceSidesHighlights[spriteIndex];
     }
 
     private void ResetDice()
@@ -107,8 +107,8 @@ public class Dice : GameEventListener<VoidEvent>
         dice.IsLocked = false;
         dice.DiceValue = 0;
 
-        var color = image.color;
-        color.a = 1.0f;
-        image.color = color;
+        var color = DiceHighlightImage.color;
+        color.a = 0.0f;
+        DiceHighlightImage.color = color;
     }
 }

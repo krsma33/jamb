@@ -145,4 +145,5 @@ public class CombinationsSums : MonoBehaviour
     private int GetTotal() => Kenta + Trilling + FullHouse + Poker + Jamb;
 
     #endregion
+
 }
