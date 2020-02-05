@@ -20,6 +20,8 @@ public class Dice : GameEventListener<VoidEvent>
     public GameState GameState;
     public Sprite[] DiceSides;
     public Sprite[] DiceSidesHighlights;
+    public Color[] DiceColors;
+    public Color[] DiceHighlightColors;
 
     private DiceStruct dice;
     public Image DiceImage;
@@ -99,7 +101,9 @@ public class Dice : GameEventListener<VoidEvent>
     private void SetSprite(int spriteIndex)
     {
         DiceImage.sprite = DiceSides[spriteIndex];
+        DiceImage.color = DiceColors[spriteIndex];
         DiceHighlightImage.sprite = DiceSidesHighlights[spriteIndex];
+        DiceHighlightImage.color = DiceHighlightColors[spriteIndex];
     }
 
     private void ResetDice()
