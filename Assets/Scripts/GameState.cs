@@ -12,6 +12,7 @@ public class GameState : ScriptableObject
 
     private int _roll;
     private int _unlockCounter;
+    private bool _gameOver;
 
     #endregion
 
@@ -79,7 +80,12 @@ public class GameState : ScriptableObject
         RaiseDiceChangedEvent();
     }
 
-    public bool CanRollDice() => (Roll == 0 || (_unlockCounter > 0 && Roll < 3 && IsRollFinished)) && _dices.Any(x => !x.IsLocked);
+    public void GameOver()
+    {
+        _gameOver = true;
+    }
+
+    public bool CanRollDice() => (Roll == 0 || (_unlockCounter > 0 && Roll < 3 && IsRollFinished)) && _dices.Any(x => !x.IsLocked) && !_gameOver;
 
     public void IncrementUnlockCounter()
     {

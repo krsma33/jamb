@@ -9,16 +9,31 @@ public class MainMenu : MonoBehaviour
 {
     public Slider LoadingBar;
     public TextMeshProUGUI PercentageLabel;
+    public HighScoreMenu HighScoreMenuScript;
+    public GameObject HighScoreMenu;
 
     private void Awake()
     {
-        gameObject.transform.position = Vector2.zero;
+        transform.position = Vector2.zero;
         LoadingBar.gameObject.transform.position = new Vector2(9999, 9999);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            QuitGame();
     }
 
     public void PlaySinglePlayerGame()
     {
         StartCoroutine(LoadSpecifiedSceneAsync("SinglePlayerGame"));
+    }
+
+    public void OpenHighScores()
+    {
+        transform.position = new Vector2(-2222, 0);
+        HighScoreMenu.transform.position = Vector2.zero;
+        HighScoreMenuScript.LoadHighScores();
     }
 
     public void QuitGame()
