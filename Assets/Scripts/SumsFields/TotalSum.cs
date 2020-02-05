@@ -121,9 +121,7 @@ public class TotalSum : MonoBehaviour
         _filledFieldsCount++;
 
         if (_filledFieldsCount >= TotalFillableFields)
-        {
             GameOverEvent.Raise(GetTotal());
-        }
     }
 
     private void HandleChange()

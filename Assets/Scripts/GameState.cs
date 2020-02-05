@@ -65,8 +65,12 @@ public class GameState : ScriptableObject
 
     public void RaiseScribbleButtonToggledEvent(bool isToggledOn)
     {
-        ScribbleButtonToggledEvent(isToggledOn);
-        RaiseDiceChangedEvent();
+        if (ScribbleButtonToggledEvent != null)
+        {
+            ScribbleButtonToggledEvent(isToggledOn);
+            RaiseDiceChangedEvent();
+        }
+
     }
 
     public void RaiseFieldCalledEvent()
@@ -90,7 +94,7 @@ public class GameState : ScriptableObject
 
             var lockedDices = GetLockedDices(_dices);
 
-            DiceChangedEvent(lockedDices);
+            DiceChangedEvent?.Invoke(lockedDices);
         }
     }
 
