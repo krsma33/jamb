@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class TotalSum : MonoBehaviour
 {
+
     #region Private Members
 
     private int _numbersSum;
     private int _maxMinSum;
     private int _combinationsSum;
+
+    private int _filledFieldsCount;
 
     #endregion
 
@@ -53,7 +56,14 @@ public class TotalSum : MonoBehaviour
     public IntEvent MaxMinSumChangedEvent;
     public IntEvent CombinationsSumChangedEvent;
 
+    public IntEvent GameOverEvent;
+
+    public VoidEvent FieldFilledEvent;
+    public VoidEvent FieldScribbledEvent;
+
     public Text Text;
+
+    public int TotalFillableFields;
 
     #endregion
 
@@ -64,6 +74,8 @@ public class TotalSum : MonoBehaviour
         NumbersSumChangedEvent.EventListeners += HandleNumbersSumChangedEvent;
         MaxMinSumChangedEvent.EventListeners += HandleMaxMinSumChangedEvent;
         CombinationsSumChangedEvent.EventListeners += HandleCombinationsSumChangedEvent;
+        FieldFilledEvent.EventListeners += HandleFieldFilledEvent;
+        FieldScribbledEvent.EventListeners += HandleFieldScribbledEvent;
     }
 
     private void OnDisable()
@@ -71,6 +83,8 @@ public class TotalSum : MonoBehaviour
         NumbersSumChangedEvent.EventListeners -= HandleNumbersSumChangedEvent;
         MaxMinSumChangedEvent.EventListeners -= HandleMaxMinSumChangedEvent;
         CombinationsSumChangedEvent.EventListeners -= HandleCombinationsSumChangedEvent;
+        FieldFilledEvent.EventListeners -= HandleFieldFilledEvent;
+        FieldScribbledEvent.EventListeners -= HandleFieldScribbledEvent;
     }
 
     private void HandleNumbersSumChangedEvent(int value)
@@ -88,9 +102,29 @@ public class TotalSum : MonoBehaviour
         CombinationsSum = value;
     }
 
+    private void HandleFieldFilledEvent()
+    {
+        GameEndLogic();
+    }
+
+    private void HandleFieldScribbledEvent()
+    {
+        GameEndLogic();
+    }
+
     #endregion
 
     #region Methods
+
+    private void GameEndLogic()
+    {
+        _filledFieldsCount++;
+
+        if (_filledFieldsCount >= TotalFillableFields)
+        {
+            GameOverEvent.Raise(GetTotal());
+        }
+    }
 
     private void HandleChange()
     {
@@ -102,4 +136,5 @@ public class TotalSum : MonoBehaviour
     private int GetTotal() => NumbersSum + MaxMinSum + CombinationsSum;
 
     #endregion
+
 }
