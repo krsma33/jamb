@@ -14,13 +14,13 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = Vector2.zero;
-        LoadingBar.gameObject.transform.position = new Vector2(9999, 9999);
+        transform.position = Vector3.zero;
+        LoadingBar.gameObject.transform.position = new Vector2(2222, 0);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && transform.position.x == 0)
             QuitGame();
     }
 
@@ -43,7 +43,7 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator LoadSpecifiedSceneAsync(string sceneName)
     {
-        gameObject.transform.position = new Vector2(9999, 9999);
+        transform.position = new Vector2(2222, 0);
         LoadingBar.gameObject.transform.position = Vector2.zero;
 
         var operation = SceneManager.LoadSceneAsync(sceneName);

@@ -17,7 +17,7 @@ public class HighScoreMenu : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && transform.position.x == 0)
             PressBack();
     }
 
