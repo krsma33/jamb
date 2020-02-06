@@ -33,10 +33,12 @@ public class HighlightParticle : MonoBehaviour
 
     private void InstantiateAndSetupPrefab(HighlightType highlightType)
     {
-        instantiatedPrefab = Instantiate(GetHighlightType(highlightType), Vector3.zero, Quaternion.identity);
+        var highlightObject = GetHighlightType(highlightType);
+
+        instantiatedPrefab = Instantiate(highlightObject, Vector3.zero, Quaternion.identity);
         instantiatedPrefab.transform.parent = transform;
         instantiatedPrefab.transform.localPosition = new Vector3(0, 0, -1);
-        instantiatedPrefab.transform.localScale = RegularHighlightPrefab.transform.localScale;
+        instantiatedPrefab.transform.localScale = highlightObject.transform.localScale;
     }
 
     public void DestroyHighlightParticles()
