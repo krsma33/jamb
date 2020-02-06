@@ -7,7 +7,8 @@ public class ScribbleField : MonoBehaviour
 {
     public GameState GameState;
     public VoidEvent FilledScratchedEvent;
-
+    public Image Icon;
+    public Color DefaultColor;
 
     private bool _isButtonToggled;
 
@@ -46,15 +47,13 @@ public class ScribbleField : MonoBehaviour
 
     private void HighlightButton(bool highlightButton)
     {
-        var image = gameObject.GetComponent<Image>();
-
         if (_isButtonToggled)
         {
-            image.color = Color.red;
+            Icon.color = Color.white;
         }
         else
         {
-            image.color = Color.white;
+            Icon.color = DefaultColor;
         }
     }
 }
