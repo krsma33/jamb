@@ -117,7 +117,8 @@ public class GameState : ScriptableObject
 
     private void ResetFields()
     {
-        DiceChangedEvent(new DiceStruct[] { });
+        _dices = new DiceStruct[6];
+        DiceChangedEvent(_dices);
     }
 
     private void ResetDiceSetStatus()
